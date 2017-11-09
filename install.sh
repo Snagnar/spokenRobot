@@ -49,29 +49,18 @@ read
 
 echo "Installing pocketsphinx..."
 sudo apt-get install git automake libtool bison  python-dev swig make pkg-config --yes
-if ls | grep -q "sphinxbase"
-then
-	echo "sphinxbase already installed!"
-else
-	git clone https://github.com/cmusphinx/sphinxbase.git
-	cd sphinxbase
-	./autogen.sh
-	make
-	sudo make install
-	cd ..
-fi
 
-if ls | grep -q "pocketsphinx"
-then
-	echo "pocketsphinx already installed!"
-else
-	git clone git://github.com/cmusphinx/pocketsphinx.git
-	cd pocketsphinx
-	./autogen.sh
-	make
-	sudo make install
-	cd ..
-fi
+cd sphinxbase
+./autogen.sh
+make
+sudo make install
+cd ..
+
+cd pocketsphinx-5prealpha
+./autogen.sh
+make
+sudo make install
+cd ..
 echo "pocketsphinx installed!"
 
 echo "Modify language model to precisely detect 'computer' keyword"
