@@ -114,10 +114,10 @@ echo "$(bin/export/replaceLine "23" "path=\"$PWD\"" "scripts/autostart.sh")" > s
 echo "$(bin/export/replaceLine "5" "path=\"$PWD\"" "scripts/sendToGoogle.sh")" > scripts/sendToGoogle.sh
 
 echo "Editing rc.local..."
-path="$PWD/scripts/autostart.sh"
+path="$PWD/scripts/autostart.sh &"
 scripts/editRcLocal.sh "$path"
 
-path="$PWD/scripts/recognize.sh"
+path="$PWD/scripts/recognize.sh &"
 scripts/editRcLocal.sh "$path"
 
 echo "rc.local edited!"
