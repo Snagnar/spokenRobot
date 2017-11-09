@@ -22,6 +22,7 @@
 # install.sh
 # Installs dependencies and spokenRobot
 
+echo "#####################################"
 echo "updating all software and install the necessary dependencies..."
 sudo apt-get update && sudo apt-get upgrade --yes
 sudo apt-get install g++ curl pulseaudio sed --yes
@@ -30,14 +31,23 @@ chmod -R a+rw ./*
 chmod a+x scripts/*
 mkdir bin/export
 
+echo ""
+echo ""
+echo "#####################################"
 echo "If your g++ version is below 4.7, abort here and update first!"
 echo "If you are not sure, just type 'g++ --version' to see what version you use. "
 echo "At a raspberry pi this might get a bit tricky, follow the instructions at http://helloraspberrypi.blogspot.de/2014/06/install-gcc-47-on-raspberry-pi-and-set.html for help"
 echo "[ENTER]"
 read 
 
+echo ""
+echo ""
+echo "#####################################"
 echo "installing espeak..."
 sudo apt-get install espeak 
+echo ""
+echo ""
+echo "#####################################"
 echo "espeak is installed!"
 echo "espeak by now uses an english male voice, if you want to change this, in "
 echo "		scripts/voice_output"
@@ -82,6 +92,9 @@ mkdir ~/bin
 cp bin/export/* ~/bin
 echo "all commands are exported! (you can find them at ~/bin)"
 
+echo ""
+echo ""
+echo "#####################################"
 printf "Enter your google speech api key\nIf you dont have one, follow the instructions given at http://nerdvittles.com/?page_id=21210\n\nYour key: "
 read apiKey
 
@@ -110,6 +123,9 @@ scripts/editRcLocal.sh "$path"
 
 echo "rc.local edited!"
 
+echo ""
+echo ""
+echo "#####################################"
 echo "spokenRobot is now installed!!!"
 echo "Do you want to start spokenRobot now <y/n>?"
 read answer
