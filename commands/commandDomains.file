@@ -1,0 +1,27 @@
+# commandDomains.file
+#
+# File with definitions of commanddomains
+#
+# general Syntax: <command_name>: <word1>, <word2>, ..., <wordN>
+#
+# Word syntax: <Single Word|Wordcombination>
+#
+# Wordcombination Syntax: [<word1>, <word2>, ..., <wordN>]
+# To be recognized as the command, every word in this wordcombination
+# has to appear at least once in the speechinput
+#
+# e.g. if you want to know the time, you can ask
+#  "what says the clock" or "what is the time" 
+#  or "could you please tell me, what time it is"
+# so your command domain could be
+# <command_name>: [says, clock], [what, time], [tell, time], clock, time
+#
+# Author: Paul Mattes
+#
+
+# command, to output the time
+tell_time: [says, time], [what, time], time
+
+tell_date: [which, date], [what, day], date
+
+shutdown: [shutdown, computer], shutdown

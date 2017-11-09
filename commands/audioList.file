@@ -1,0 +1,35 @@
+# audioList.file
+# 
+# File with definitions of answers from programm 
+#
+# general Syntax: <n>: <Text|Audiofile|Selektor>
+#
+# Textsyntax: "<Some Text>"
+#
+# Audiosyntax: Path_to_Audiofile.wav
+#	=> file must be located in the "audios"-directory
+#
+# Selektor: programm selects random index from selektor List
+# Selektorsyntax: [<n1>, <n2>, ..., <nN>]
+# Output: e.g. <n3> so entry at <n3> in this file is the output
+#
+# Author: Paul Mattes
+#
+
+
+
+# sound, when keyword 'computer' is recognized
+1: computerbeep_75.wav
+
+# answer, when command is not known
+2: [3, 4, 5, 6, 7]
+3: "Sorry, I have not understod"
+4: "Sorry?"
+5: "Please, what?"
+6: "I don't know, what you mean"
+7: "Sorry, could you please repeat?"
+
+# some error output
+8: alert04.wav
+9: "The requested speech output was not found!"
+10: "please specify!"

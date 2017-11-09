@@ -1,0 +1,97 @@
+# commands.file
+#
+# In this file you specify the code to be executed, 
+# if the command is named in speech input
+# 
+# General Syntax: 
+# <"command_name">
+# 	Code...
+# </"command_name">
+#
+# command_name: the name of the command, which is needed in 
+# 				commandDomains.file, too, to assign a command domain
+# 				to the code in this file
+# 
+# If you want to access the full voiceinput to search for example
+# for other params given there, the full string is saved in a variable
+# named $input
+#
+# Your code can contain an voice output command
+# which follows syntax:
+# output "<Text|{<n1>, <n2>, ..., <nN>}>"
+# so if you just enter a Text, it will just be read out by a computer
+# voice, but if you enter a list of indices, those indices in the
+# audioList.file will be read out, so you can use the services of
+# output defined there.
+# 
+# It is also possible to search a string for params, e.g. the $input
+# string. For that use the command
+# searchForParams "['Param1', ..., 'ParamN']" "<stringVariable>"
+# which returns a string with the first param found in the input string.
+# If it could not find any param, it returns an empty string.
+#
+# But we didnt stop there... ;)
+# You can search for numbers in the input string to by just typing
+# searchForNumber "<stringVariable>"
+# which returns a string with a number if found.
+#
+# Beside that you can request a speech input by typing
+# requestInput
+# which starts a record, transcripes it an returns a string with that
+# transcript
+#
+# Author: Paul Mattes
+#
+
+<"tell_time">
+	
+	LANG=en_US
+	outputString=$(date +"It is %_H %_M")
+	output "$outputString"
+
+</"tell_time">
+
+
+<"tell_date">
+	
+	LANG=en_US
+	outputString="$(date +"It is %A,, %_m, %_d, %_Y")"
+	output "$outputString"
+
+</"tell_date">
+
+
+<"shutdown">
+
+	echo $input
+	found=$(searchForParams "{'o'clock', 'hour', 'minute', 'not', 'abbort'}" "$input")
+	echo $found
+	number=""
+	
+	if [ "$found" == "o'clock" ]
+	then
+		number=$(searchForNumber "$input")
+		shutdown -h $number:00
+		output "Der Computer wird um $number Uhr heruntergefahren!"
+	elif [ "$found" == "hour" ]
+	then
+		number=$(searchForNumber "$input")
+		shutdown -h $((number*60))
+		output "Der Computer wird in $number Stunden heruntergefahren!"
+	elif [ "$found" == "minute" ]
+	then
+		number=$(searchForNumber "$input")
+		shutdown -h $number
+		output "Der Computer wird in $number Minuten heruntergefahren!"
+	elif [ "$found" == "not" ] || [ "$found" == "abbort" ]
+	then
+		number=$(searchForNumber "$input")
+		shutdown -c
+		output "Breche Herunterfahren ab!"
+	else
+		echo "Sudden shutdown!"
+		output "Fahre den Computer herunter!"
+		shutdown -h now
+	fi
+
+</"shutdown">

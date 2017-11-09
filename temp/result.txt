@@ -1,0 +1,2 @@
+{"result":[]}
+{"result":[{"alternative":[{"transcript":"it is 3 o'clock","confidence":0.94307441},{"transcript":"it is 3"},{"transcript":"it is three o'clock"}],"final":true}],"result_index":0}

@@ -1,0 +1,94 @@
+Language model created by QuickLM on Wed Oct 18 09:48:08 EDT 2017
+Copyright (c) 1996-2010 Carnegie Mellon University and Alexander I. Rudnicky
+
+The model is in standard ARPA format, designed by Doug Paul while he was at MITRE.
+
+The code that was used to produce this language model is available in Open Source.
+Please visit http://www.speech.cs.cmu.edu/tools/ for more information
+
+The (fixed) discount mass is 0.5. The backoffs are computed using the ratio method.
+This model based on a corpus of 9 sentences and 20 words
+
+\data\
+ngram 1=20
+ngram 2=29
+ngram 3=22
+
+\1-grams:
+-0.9488 </s> -0.3010
+-0.9488 <s> -0.2368
+-1.9031 A -0.2956
+-1.4260 COMPUTER -0.2492
+-1.9031 EVERYTHING -0.2956
+-1.9031 HEAVY -0.2492
+-1.9031 HELICOPTER -0.2492
+-1.9031 HELLO -0.2844
+-1.4260 IS -0.2844
+-1.9031 MY -0.2844
+-1.9031 NOT -0.2956
+-1.9031 REAL -0.2956
+-1.9031 REALITY -0.2492
+-1.9031 REALLY -0.2492
+-1.9031 ROBOTER -0.2844
+-1.9031 SO -0.2956
+-1.9031 STUFF -0.2492
+-1.9031 THINGS -0.2492
+-1.9031 WHAT -0.2844
+-1.9031 WHY -0.2844
+
+\2-grams:
+-1.2553 <s> A 0.0000
+-1.2553 <s> COMPUTER 0.0000
+-1.2553 <s> HELICOPTER 0.0000
+-1.2553 <s> HELLO 0.0000
+-1.2553 <s> REALITY 0.0000
+-1.2553 <s> STUFF 0.0000
+-1.2553 <s> THINGS 0.0000
+-1.2553 <s> WHAT 0.0000
+-1.2553 <s> WHY 0.0000
+-0.3010 A REAL 0.0000
+-0.3010 COMPUTER </s> -0.3010
+-0.3010 EVERYTHING SO 0.0000
+-0.3010 HEAVY </s> -0.3010
+-0.3010 HELICOPTER </s> -0.3010
+-0.3010 HELLO COMPUTER 0.0000
+-0.7782 IS EVERYTHING 0.0000
+-0.7782 IS MY 0.0000
+-0.7782 IS NOT 0.0000
+-0.3010 MY COMPUTER 0.0000
+-0.3010 NOT REALLY 0.0000
+-0.3010 REAL ROBOTER 0.0000
+-0.3010 REALITY </s> -0.3010
+-0.3010 REALLY </s> -0.3010
+-0.3010 ROBOTER IS -0.2218
+-0.3010 SO HEAVY 0.0000
+-0.3010 STUFF </s> -0.3010
+-0.3010 THINGS </s> -0.3010
+-0.3010 WHAT IS -0.2218
+-0.3010 WHY IS -0.2218
+
+\3-grams:
+-0.3010 <s> A REAL
+-0.3010 <s> COMPUTER </s>
+-0.3010 <s> HELICOPTER </s>
+-0.3010 <s> HELLO COMPUTER
+-0.3010 <s> REALITY </s>
+-0.3010 <s> STUFF </s>
+-0.3010 <s> THINGS </s>
+-0.3010 <s> WHAT IS
+-0.3010 <s> WHY IS
+-0.3010 A REAL ROBOTER
+-0.3010 EVERYTHING SO HEAVY
+-0.3010 HELLO COMPUTER </s>
+-0.3010 IS EVERYTHING SO
+-0.3010 IS MY COMPUTER
+-0.3010 IS NOT REALLY
+-0.3010 MY COMPUTER </s>
+-0.3010 NOT REALLY </s>
+-0.3010 REAL ROBOTER IS
+-0.3010 ROBOTER IS NOT
+-0.3010 SO HEAVY </s>
+-0.3010 WHAT IS MY
+-0.3010 WHY IS EVERYTHING
+
+\end\
