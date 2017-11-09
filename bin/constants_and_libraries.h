@@ -114,7 +114,7 @@ static void writeFlagToConfig(std::string flag, std::string value) {
 		std::ofstream changedConfigFile(localPath+"config.conf", std::ios::out|std::ios::trunc);
 		std::string fullContent="";
 		for(auto it : flags)
-			fullContent+=it.first+": "+it.second+"\n";
+			fullContent+=it.first+"=\""+it.second+"\"\n";
 		changedConfigFile<<fullContent;
 		changedConfigFile.close();
 	}
