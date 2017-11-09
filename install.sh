@@ -88,9 +88,8 @@ make all
 echo "All binaries are compiled!"
 
 echo "exporting commands..."
-mkdir ~/bin
-cp bin/export/* ~/bin
-echo "all commands are exported! (you can find them at ~/bin)"
+cp bin/export/* /usr/local/bin
+echo "all commands are exported! (you can find them at /usr/local/bin)"
 
 echo ""
 echo ""
