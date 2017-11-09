@@ -9,6 +9,7 @@ sudo apt-get install g++ curl pulseaudio sed --yes
 
 chmod -R a+rw ./*
 chmod a+x scripts/*
+mkdir bin/export
 
 echo "If your g++ version is below 4.7, abort here and update first!"
 echo "If you are not sure, just type 'g++ --version' to see what version you use. "
