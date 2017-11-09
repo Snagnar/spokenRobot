@@ -138,7 +138,7 @@ then
 	then
 		echo "say something (e.g. 'computer') to the microphone..."
 		sleep 6s
-		res=$(cat temp/result.txt)
+		res=$(cat logs/pocketsphinx_output.log)
 		if [ ${#res} -eq 0 ]
 		then
 			echo "Something is wrong, maybe try to restart your computer?"
