@@ -1,8 +1,8 @@
-##########################################
+
 #					 # 
 #		README		         #
 #					 #
-##########################################
+
 
 1. Introducion
 	First of all I want to appologize for bad english. I'm not a native
