@@ -75,7 +75,7 @@ static std::string getTranscript() {
 		
 		inputFile.close();
 		std::transform(bestTranscript.begin(), bestTranscript.end(), bestTranscript.begin(), ::tolower);
-		tempString="cp /dev/null "+voiceRecogInputPath;
+		tempString="cp /dev/null "+localPath+"temp/result.txt";
 		system(tempString.c_str());
 	}
 	else {
