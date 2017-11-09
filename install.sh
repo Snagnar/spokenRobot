@@ -108,8 +108,8 @@ printf "#!/bin/bash\n#sendToGoogle.sh\n#This File sends an audio file to googles
 --header 'Content-Type: audio/l16; rate=44000;' \
 'https://www.google.com/speech-api/v2/recognize?output=json&lang=$langCode&key=$apiKey' > \$path/temp/result.txt" > scripts/sendToGoogle.sh
 
-echo "$(bin/export/replaceLine "5" "path=\"$PWD\"" "scripts/recognize.sh")" > scripts/recognize.sh
-echo "$(bin/export/replaceLine "5" "path=\"$PWD\"" "scripts/autostart.sh")" > scripts/autostart.sh
+echo "$(bin/export/replaceLine "23" "path=\"$PWD\"" "scripts/recognize.sh")" > scripts/recognize.sh
+echo "$(bin/export/replaceLine "23" "path=\"$PWD\"" "scripts/autostart.sh")" > scripts/autostart.sh
 echo "$(bin/export/replaceLine "5" "path=\"$PWD\"" "scripts/sendToGoogle.sh")" > scripts/sendToGoogle.sh
 
 echo "Editing rc.local..."
