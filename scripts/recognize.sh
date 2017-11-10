@@ -36,7 +36,6 @@ do
 	cp /dev/null $output_file
 	firstLine=$(head -1 $output_file_temp)
 	
-	tail -n +2 $output_file_temp | sponge $output_file_temp
 	exec 3>&-
 	
 	if [ ${#firstLine} -eq 0 ]
