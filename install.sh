@@ -66,10 +66,10 @@ else
 	echo "cloning sphinxbase..."
 	git clone https://github.com/cmusphinx/sphinxbase.git
 	cd sphinxbase
-	./autogen.sh
-	./congigure
-	make
-	make check
+	sudo ./autogen.sh
+	sudo ./congigure
+	sudo make
+	sudo make check
 	sudo make install
 	cd ..
 fi
@@ -80,10 +80,10 @@ then
 else
 	git clone git://github.com/cmusphinx/pocketsphinx.git
 	cd pocketsphinx
-	./autogen.sh
-	./configure
-	make
-	make check
+	sudo ./autogen.sh
+	sudo ./configure
+	sudo make
+	sudo make check
 	sudo make install
 	cd ..
 fi
