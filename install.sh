@@ -67,7 +67,7 @@ else
 	git clone https://github.com/cmusphinx/sphinxbase.git
 	cd sphinxbase
 	sudo ./autogen.sh
-	sudo ./congigure
+	sudo ./configure
 	sudo make
 	sudo make check
 	sudo make install
